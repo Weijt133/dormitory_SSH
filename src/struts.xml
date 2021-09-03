@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="mystruts" extends="struts-default">
+	<action name="loginAction" class="AdminAction" method="login">
+		<result name="success">/superadmin.jsp</result>
+		<result name="input">/index.jsp</result>
+	</action>
+	<action name="addBuilding" class="BuildingAction" method="add">
+		<result name="success">/buildingInfo.jsp</result>
+		<result name="input">/addBuilding.jsp</result>
+		<result name="login">/index.jsp</result>
+	</action>
+	<action name="queryall" class="BuildingAction" method="querybypage">
+		<result name="success">/queryBuilding.jsp</result>
+		<result name="error">/error.jsp</result>
+		<result name="input">/queryBuilding.jsp</result>
+	</action>
+	<action name="querybytype" class="BuildingAction" method="querybytype">
+		<result name="error">/error.jsp</result>
+		<result name="querybybid">/queryBuildingByType.jsp</result>
+		<result name="querybysex">/queryBuilding.jsp</result>
+		<result name="querybylid">/queryBuilding.jsp</result>
+		<result name="querybynumber">/queryBuildingByType.jsp</result>
+		<result name="input">/queryBuilding.jsp</result>
+	</action>
+	<action name="querybybidnumber" class="BuildingAction" method="querybybidnumber">
+		<result name="success">/modifyBuilding.jsp</result>
+		<result name="input">/modifyBuilding.jsp</result>
+	</action>
+	<action name="modifyBuilding" class="BuildingAction" method="modify">
+		<result name="success">/buildingInfo.jsp</result>
+		<result name="input">/modifyBuilding.jsp</result>
+	</action>
+	<action name="deleteBuildingByBid" class="BuildingAction" method="delete">
+		<result name="success">/superManActionSuc.jsp</result>
+		<result name="error">/error.jsp</result>
+		<result name="input">/deleteBuilding.jsp</result>
+	</action>
+	<action name="exit" class="AdminAction" method="exit">
+		<result name="success">/index.jsp</result>
+	</action>
+	<action name="addBuildingManager" class="DormitoryAction" method="enroll">
+		<result name="success">/queryDormtoryManager.jsp</result>
+		<result name="input">/addDormtoryManager.jsp</result>
+	</action>
+	<action name="queryDormAdmin" class="DormitoryAction" method="query">
+		<result name="success">/dormitoryManagerInfo.jsp</result>
+		<result name="update">/modifyDormtoryManager.jsp</result>
+		<result name="delete">/deleteDormtoryManager.jsp</result>
+		<result name="input">/queryDormtoryManager.jsp</result>
+	</action>
+	<action name="modifyBuildingManager" class="DormitoryAction" method="modify">
+	<result name="success">/dormitoryManagerInfo.jsp</result>
+	<result name="error">/error.jsp</result>
+	<result name="input">/modifyDormtoryManager.jsp</result>
+	</action>
+	<action name="deleteDormitoryManager" class="DormitoryAction" method="delete">
+	<result name="success">/dormitoryManagerInfo.jsp</result>
+	<result name="error">/error.jsp</result>
+	<result name="input">/index.jsp</result>
+	</action>
+	<action name="addStudent" class="StudentAction" method="enroll">
+		<result name="success">/studentInfo.jsp</result>
+		<result name="input">/addStudent.jsp</result>
+	</action>
+	
+	<action name="queryallstudent" class="StudentAction" method="queryall">
+		<result name="success">/queryStudentByType.jsp</result>
+		<result name="input">/queryStudentByType.jsp</result>
+	</action>
+	<action name="querystudentbytype" class="StudentAction" method="querybytype">
+		<result name="querybyname">/studentInfo.jsp</result>
+		<result name="querybysex">/queryStudentByType.jsp</result>
+		<result name="querybyid">/studentInfo.jsp</result>
+		<result name="querybymajor">/queryStudentByType.jsp</result>
+		<result name="querybydate">/queryStudentByType.jsp</result>
+		<result name="input">/queryStudentByType.jsp</result>
+	</action>
+	<action name="updateStudent" class="StudentAction" method="updateStudent">
+		<result name="success">/studentInfo.jsp</result>
+		<result name="input">/queryStudentByType.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="updatequery" class="StudentAction" method="updatequery">
+		<result name="success">/_StudentInfo.jsp</result>
+		<result name="delete">/deleteStudentInfo.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="deleteStudent" class="StudentAction" method="delete">
+		<result name="success">/queryStudentByType.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="querydormitory" class="DormitoryAction" method="querydormitory">
+		<result name="success">/queryDormitory.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+</package>
+</struts>    
